@@ -1,7 +1,1 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-
-/* Small */
-/* Large */
-@media (min-width: 37em) {
-    body {}
-}
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");header{width:100vw;background-color:#6495ED}header a,header a:visited{color:#FAEBD7}header a:hover{color:white}header ul{list-style:none}main{width:100vw;background-color:#FAEBD7}main h2 a,main h2 a:visited{color:black}main article{background-color:white;margin:1em;box-shadow:5px 5px 5px grey}main article figure{width:60vw;margin:auto}main article figure img{width:100%}h1,h2{font-family:'Lora', serif}body{font-family:Arial, Helvetica, sans-serif}a,a:visited{text-decoration:none;color:#6495ED}a:active{color:#DEB887}a:hover{text-decoration:underline}
