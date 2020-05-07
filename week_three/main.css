@@ -1,0 +1,112 @@
+/* Import, Initialize Functions and Variables */
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+/* ***** This mixin is to demonstrate how they work ***** */
+/* ***** The advantage to putting all of my colors in one place is that it allows me to quickly change the color scheme of the website without having to sift through the layout ***** */
+/* Small and Shared styles*/
+/* ***** I nest my sass in order from top of the page to the bottom of the page. I try to make it resemble my HTML as much as possible for convenience of returning after an extended time ***** */
+header {
+  background-color: #6495ED;
+  text-align: right;
+  padding: 2em;
+}
+header a,
+header a:visited {
+  color: #FAEBD7;
+}
+header a:hover {
+  color: white;
+}
+header ul {
+  list-style: none;
+}
+header ul li {
+  margin-top: 1em;
+}
+
+main {
+  width: 100vw;
+  background-color: #FAEBD7;
+}
+main h2 a,
+main h2 a:visited {
+  color: black;
+}
+main .post-date {
+  color: grey;
+}
+main article {
+  background-color: white;
+  margin: 1.5em;
+  padding: 2em;
+  box-shadow: 5px 5px 5px lightGrey;
+}
+main article figure {
+  width: 60vw;
+  margin: auto;
+}
+main article figure img {
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Lora", serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+body div {
+  display: flex;
+  flex-direction: column;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #6495ED;
+}
+
+a:active,
+a:visited:active {
+  color: #DEB887;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Large Mixin */
+@media (min-width: 37em) {
+  body figure {
+    max-width: 30vw;
+  }
+  body div {
+    flex-direction: row;
+  }
+  body div header {
+    width: 30vw;
+  }
+}
+/* Large */
+/* ***** I did not originally use a mixin because there was only 7 lines of code here. I recognize this is an appropriate place for one when you have a longer list of reponsive changes or multiple files ***** */
+/* original code
+@media (min-width: 37em) {
+    body {
+        figure {
+            max-width: 30vw;
+        }
+
+        div {
+            flex-direction: row;
+
+            header {
+                width: 30vw;
+            }
+        }
+    }
+} 
+*/
+
+/*# sourceMappingURL=main.css.map */

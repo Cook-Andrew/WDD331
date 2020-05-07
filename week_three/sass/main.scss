@@ -1,0 +1,159 @@
+/* Import, Initialize Functions and Variables */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* ***** This mixin is to demonstrate how they work ***** */
+@mixin breakpoint($break) {
+    @if $break==large {
+
+        //if the function callback is large, use a media query
+        @media (min-width: 37em) {
+            @content;
+        }
+    }
+
+    @else {
+        //otherwise don't because the small styles are mixed in with the shared styles (no pun intended)
+        @content;
+    }
+}
+
+/* ***** The advantage to putting all of my colors in one place is that it allows me to quickly change the color scheme of the website without having to sift through the layout ***** */
+$header_color: #6495ED; //also used for body links
+$header_hover: white;
+
+$main_color: #FAEBD7; //also used for header links
+$heading_link: black; //note the difference between a header and heading
+$post-date_color: grey;
+$article_color: white;
+$active_color: #DEB887;
+$box_shadow: 5px 5px 5px lightGrey; //I am assuming future use of box shadow would always be the same. If there were ever two types of box shadow, I would change this to $box_shadow_color or something similar
+
+/* Small and Shared styles*/
+/* ***** I nest my sass in order from top of the page to the bottom of the page. I try to make it resemble my HTML as much as possible for convenience of returning after an extended time ***** */
+@include breakpoint(content) {
+
+    //usually I would use include to sepparate my css into multiple files. the order in which you include them still matters, especially since I didn't use a media query in the 'else' section of my mixin demonstration
+    header {
+        background-color: $header_color;
+        text-align: right;
+        padding: 2em;
+
+        a,
+        a:visited {
+            color: $main_color;
+        }
+
+        a:hover {
+            color: $header_hover;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                margin-top: 1em;
+            }
+        }
+    }
+
+    main {
+        width: 100vw;
+        background-color: $main_color;
+
+        h2 {
+
+            a,
+            a:visited {
+                color: $heading_link;
+            }
+        }
+
+        .post-date {
+            color: $post-date_color;
+        }
+
+        article {
+            background-color: $article_color;
+            margin: 1.5em;
+            padding: 2em;
+            box-shadow: $box_shadow;
+
+            figure {
+                width: 60vw;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    h1,
+    h2 {
+        font-family: 'Lora', serif;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    a,
+    a:visited {
+        text-decoration: none;
+        color: $header_color;
+    }
+
+    a:active,
+    a:visited:active {
+        color: $active_color;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Large Mixin */
+@include breakpoint(large) {
+    body {
+        figure {
+            max-width: 30vw;
+        }
+
+        div {
+            flex-direction: row;
+
+            header {
+                width: 30vw;
+            }
+        }
+    }
+}
+
+
+/* Large */
+/* ***** I did not originally use a mixin because there was only 7 lines of code here. I recognize this is an appropriate place for one when you have a longer list of reponsive changes or multiple files ***** */
+/* original code
+@media (min-width: 37em) {
+    body {
+        figure {
+            max-width: 30vw;
+        }
+
+        div {
+            flex-direction: row;
+
+            header {
+                width: 30vw;
+            }
+        }
+    }
+} 
+*/
