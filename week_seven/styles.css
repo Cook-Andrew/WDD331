@@ -77,7 +77,7 @@
 }
 
 .highlight {
-  border: 1px dashed red;
+  color: blue;
 }
 
 /* grid layout library partial */
@@ -202,6 +202,10 @@
 
   .offset-8 {
     margin-left: 0;
+  }
+
+  .highlight {
+    color: red;
   }
 }
 *,

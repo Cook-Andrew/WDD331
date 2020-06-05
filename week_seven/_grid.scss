@@ -58,4 +58,7 @@ $row-end: $num-rows+1;
     }
 }
 
+.highlight { //In browsers that DO support grid this shows up red
+    color: red;
+}
 }

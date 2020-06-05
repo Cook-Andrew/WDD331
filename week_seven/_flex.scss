@@ -43,7 +43,6 @@ $loop-end: $num-columns+1;
     }
 }
 
-//this is to make sure you're selecting the correct pip
-.highlight {
-    border: 1px dashed red;
+.highlight { //In browsers that dont support grid this shows up blue
+    color: blue;
 }
