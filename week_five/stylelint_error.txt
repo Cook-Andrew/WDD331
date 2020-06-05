@@ -1,0 +1,16 @@
+YAMLSemanticError: YAML Error in C:\Users\Ender's Gaming Comp\Documents\Andrew\GitHub\CIT230\weather_site\css\.stylelintrc:
+Implicit map keys need to be on a single line at line 1, column 1:
+
+2{
+^^…
+
+    at resolveBlockMapItems (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\resolveSeq-4a68b39b.js:1818:27)
+    at Object.resolveMap [as resolve] (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\resolveSeq-4a68b39b.js:1612:79)
+    at resolveByTagName (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\resolveSeq-4a68b39b.js:1384:25)
+    at resolveTag (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\resolveSeq-4a68b39b.js:1414:17)
+    at resolveNodeValue (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\resolveSeq-4a68b39b.js:1535:23)
+    at Object.resolveNode (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\resolveSeq-4a68b39b.js:1583:15)
+    at parseContents (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\Document-2cf6b08c.js:357:30)
+    at Document.parse (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\Document-2cf6b08c.js:615:5)
+    at parseDocument (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\index.js:44:37)
+    at Object.parse (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\index.js:55:15)

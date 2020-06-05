@@ -1,0 +1,16 @@
+YAMLSyntaxError: YAML Error in C:\Users\Ender's Gaming Comp\Documents\Andrew\GitHub\CIT230\weather_site\css\.stylelintrc:
+All collection items must start at the same column at line 1, column 1:
+
+2{
+^^…
+
+    at Collection.parse (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\parse-cst.js:331:24)
+    at C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\parse-cst.js:1605:29
+    at Document.parseContents (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\parse-cst.js:622:26)
+    at Document.parse (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\parse-cst.js:685:19)
+    at Object.parse (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\parse-cst.js:1723:18)
+    at parseDocument (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\index.js:43:24)
+    at Object.parse (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\yaml\dist\index.js:55:15)
+    at loadYaml (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\cosmiconfig\dist\loaders.js:44:25)
+    at Explorer.loadFileContent (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\cosmiconfig\dist\Explorer.js:107:32)
+    at Explorer.createCosmiconfigResult (C:\Users\Ender's Gaming Comp\AppData\Roaming\npm\node_modules\stylelint\node_modules\cosmiconfig\dist\Explorer.js:112:36)

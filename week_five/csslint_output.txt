@@ -1,0 +1,53 @@
+
+
+csslint: There are 10 problems in C:\Users\Ender's Gaming Comp\Documents\Andrew\GitHub\CIT230\weather_site\css\small.css.
+
+small.css
+1: warning at line 1, col 1
+Rule doesn't have all its properties in alphabetical order.
+body {
+
+small.css
+2: warning at line 13, col 1
+Rule doesn't have all its properties in alphabetical order.
+.logoPng,
+
+small.css
+3: warning at line 26, col 5
+Expected (flex-start | flex-end | center | space-between | space-around) but found 'space-evenly'.
+    justify-content: space-evenly;
+
+small.css
+4: warning at line 29, col 1
+Rule doesn't have all its properties in alphabetical order.
+table,
+
+small.css
+5: warning at line 47, col 1
+Rule doesn't have all its properties in alphabetical order.
+nav a {
+
+small.css
+6: warning at line 52, col 1
+Rule doesn't have all its properties in alphabetical order.
+li {
+
+small.css
+7: warning at line 52, col 1
+The properties padding-top, padding-bottom, padding-left, padding-right can be replaced by padding.
+li {
+
+small.css
+8: warning at line 77, col 1
+Rule doesn't have all its properties in alphabetical order.
+section {
+
+small.css
+9: warning at line 82, col 1
+Rule doesn't have all its properties in alphabetical order.
+img {
+
+small.css
+10: warning at line 84, col 5
+Using width with border can sometimes make elements larger than you expect.
+    border: solid 2px #b28b84;
