@@ -1,5 +1,120 @@
-@import 'flex';
-@import 'grid';
+@supports (display: grid) {
+
+    //layout
+    .cell {
+        flex: 1;
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        align-content: space-between;
+        height: 100%;
+    }
+
+
+    //variables
+    $num-columns: 8;
+    $one-column: 100% / $num_columns;
+    $num-rows: 4;
+    $one-row: 100% / $num_rows;
+    $loop-start: 1;
+    $loop-end: $num-columns+1;
+    $row-start: 1;
+    $row-end: $num-rows+1;
+
+    .row {
+        display: grid;
+        grid-template-columns: repeat($num_columns, $one_column);
+        grid-template-rows: repeat($num_rows, $one_row);
+    }
+
+    //mixins
+    @mixin span($span-num) {
+        grid-column-end: span $span-num;
+    }
+
+    @mixin col($col_num) {
+        grid-column-start: $col_num;
+    }
+
+    @mixin row($row_num) {
+        grid-row-start: $row_num;
+        grid-row-end: $row_num + 1;
+    }
+
+    //make grid span classes 
+    @for $index from $loop-start to $loop-end {
+        .span-#{$index} {
+            @include span($index);
+        }
+    }
+
+    //make grid col classes 
+    @for $index from $loop-start to $loop-end {
+        .colstart-#{$index} {
+            @include col($index);
+        }
+    }
+
+    //make grid row classes 
+    @for $index from $row-start to $row-end {
+        .rowstart-#{$index} {
+            @include row($index);
+        }
+    }
+
+    //disable flex offset classes if grid is supported
+    @for $index from $loop-start to $loop-end {
+        .offset-#{$index} {
+            margin-left: 0;
+        }
+    }
+
+    .highlight {
+        //In browsers that DO support grid this shows up red
+        color: red;
+    }
+}
+
+@supports not (display: grid) {
+
+    //variables
+    $num-columns: 8;
+    $one-column: 100% / $num_columns;
+    $loop-start: 1;
+    $loop-end: $num-columns+1;
+
+    //mixins
+    @mixin span($span-num) {
+        flex: 0 0 $one-column * $span-num;
+    }
+
+    @mixin offset($offset-num) {
+        margin-left: $one-column * $offset-num;
+    }
+
+    //make flex span classes 
+    @for $index from $loop-start to $loop-end {
+        .span-#{$index} {
+            @include span($index);
+        }
+    }
+
+    //make flex offset classes
+    @for $index from $loop-start to $loop-end {
+        .offset-#{$index} {
+            @include offset($index);
+        }
+    }
+
+    .highlight {
+        //In browsers that dont support grid this shows up blue
+        color: blue;
+    }
+}
 
 //variables to setup basic size and shape of the card and pips
 $card-width: 40vw;
@@ -42,8 +157,9 @@ $icon-size: $card-width / 5;
 .number {
     text-align: center;
     font-size: $font-size-number;
-  //an icon that is part of a number should be half the normal size
-    & > .icon {
+
+    //an icon that is part of a number should be half the normal size
+    &>.icon {
         width: $icon-size * .5;
         height: $icon-size *.5;
     }
@@ -54,3 +170,4 @@ $icon-size: $card-width / 5;
     transform: rotate(180deg);
 }
 
+//layout
