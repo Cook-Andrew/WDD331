@@ -43,6 +43,7 @@ $loop-end: $num-columns+1;
     }
 }
 
-.highlight { //In browsers that dont support grid this shows up blue
+.highlight {
+    //In browsers that dont support grid this shows up blue
     color: blue;
 }
